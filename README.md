@@ -1,12 +1,14 @@
 # Diana
 This is a fork of Artemis With MoonLight Keyboard Shortcuts Merged.
 
-Download APK Here: https://github.com/nwy140/moonlight-android-artemis-no-keyboard-shortcut-merged/releases/tag/artemis-no-keyboard-shortcut-merged
+## Download APK Here  
+https://github.com/nwy140/moonlight-android-artemis-no-keyboard-shortcut-merged/releases/tag/artemis-no-keyboard-shortcut-merged
 
-This repo is a merge of these 2 repository below
-https://github.com/ClassicOldSong/moonlight-android
+## This repo is a merge of these 2 repository below  
+https://github.com/ClassicOldSong/moonlight-android  
 https://github.com/lyc8503/moonlight-android-no-keyboard-shortcut
 
+## Why I made this fork
 I realized that bluetooth keyboard/touchpad combo works better on artemis
 But I could not perform alt tab on my xiaomi pad 7, but alt tab works well on the no-keyboard-shortcut repo with its accessibility setting
 
