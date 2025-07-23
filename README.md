@@ -10,7 +10,7 @@ https://github.com/lyc8503/moonlight-android-no-keyboard-shortcut
 
 ## Why I made this fork
 I realized that bluetooth keyboard/touchpad combo works better on artemis
-But I could not perform alt tab on my xiaomi pad 7, but alt tab works well on the no-keyboard-shortcut repo with its accessibility setting
+But I could not perform alt tab on my xiaomi pad 7, but alt tab works well on the no-keyboard-shortcut repo with its accessibility setting, you might also need to allow restricted settings in the App's app info. 
 
 So I decided to just merge these 2 repos together to get the best of both features
 
