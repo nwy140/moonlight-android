@@ -11,12 +11,7 @@ import java.util.List;
 
 public class KeyboardAccessibilityService extends AccessibilityService {
 
-    //不屏蔽的按键列表
-    private final static List BLACKLIST_KEYS = Arrays.asList(
-            KeyEvent.KEYCODE_VOLUME_UP,
-            KeyEvent.KEYCODE_VOLUME_DOWN,
-            KeyEvent.KEYCODE_POWER
-    );
+    private final static List<Integer> BLACKLISTED_KEYS = Arrays.asList(KeyEvent.KEYCODE_VOLUME_UP, KeyEvent.KEYCODE_VOLUME_DOWN, KeyEvent.KEYCODE_POWER);
 
     @Override
     public boolean onKeyEvent(KeyEvent event) {
@@ -24,8 +19,8 @@ public class KeyboardAccessibilityService extends AccessibilityService {
         int keyCode = event.getKeyCode();
 //        Toast.makeText(getApplicationContext(),"scancode:"+event.getScanCode()+",code:"+event.getKeyCode(),Toast.LENGTH_LONG).show();
         //主要解决系统自带快捷键在pc端无法使用问题 home键 scancode=172 code- 3
-        if (Game.instance != null && Game.instance.connected && !BLACKLIST_KEYS.contains(keyCode)) {
-
+        if (Game.instance != null && Game.instance.isConnected() && !BLACKLISTED_KEYS.contains(keyCode)) {
+            // Preventing default will disable shortcut actions like alt+tab and etc.            // Preventing default will disable shortcut actions like alt+tab and etc.
             if (action == KeyEvent.ACTION_DOWN) {
                 //fix 小米平板esc键按钮映射错误 KEYCODE_BACK=4
                 if(event.getScanCode()==1){
@@ -35,7 +30,6 @@ public class KeyboardAccessibilityService extends AccessibilityService {
                 Game.instance.handleKeyDown(event);
                 return true;
             } else if (action == KeyEvent.ACTION_UP) {
-                //fix 小米平板esc键按钮映射错误 KEYCODE_BACK=4
                 if(event.getScanCode()==1){
                     Game.instance.handleKeyUp(new KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_ESCAPE));
                     return true;
@@ -47,7 +41,7 @@ public class KeyboardAccessibilityService extends AccessibilityService {
 
         return super.onKeyEvent(event);
     }
-
+    //fix 小米平板esc键按钮映射错误 KEYCODE_BACK=4
     @Override
     public void onServiceConnected() {
         LimeLog.info("Keyboard service is connected");
@@ -68,5 +62,4 @@ public class KeyboardAccessibilityService extends AccessibilityService {
     public void onInterrupt() {
 
     }
-
 }
