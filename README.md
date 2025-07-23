@@ -1,3 +1,15 @@
+# Diana
+This is a fork of Artemis With MoonLight Keyboard Shortcuts Merged.
+
+This repo is a merge of these 2 repository below
+https://github.com/ClassicOldSong/moonlight-android
+https://github.com/lyc8503/moonlight-android-no-keyboard-shortcut
+
+I realized that bluetooth keyboard/touchpad combo works better on artemis
+But I could not perform alt tab on my xiaomi pad 7, but alt tab works well on the no-keyboard-shortcut repo with its accessibility setting
+
+So I decided to just merge these 2 repos together to get the best of both features
+
 # Artemis Android
 
 Previously named Moonlight Noir
