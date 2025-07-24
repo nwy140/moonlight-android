@@ -15,7 +15,6 @@ The shortcuts also seems to work better on Xiaomi Pad 7 Workstation Mode.
 
 So I decided to just merge these 2 repos together to get the best of both features
 
-## Github Issue Linked
 https://github.com/ClassicOldSong/moonlight-android/issues/225#issuecomment-3111264445
 
 ## https://github.com/lyc8503/moonlight-android-no-keyboard-shortcut
